@@ -23,14 +23,17 @@ public class GoofyNames {
 		for (int i = 0; i < name.length(); i++) {
 			String hello = name.substring(i, i + 1);
 			if (i % 2 == 0) {
-				hello.toUpperCase();
+			     hello=hello.toUpperCase();
+				goofyName+=hello;
 			} else {
-				hello.toLowerCase();
+				hello=hello.toLowerCase();
+				goofyName+=hello;
 
 			}
-			System.out.println(hello);
+		
 
 		}
+		JOptionPane.showMessageDialog(null, goofyName);
 
 		// 4. Create a String variable to store the next character of the name
 		// using .substring(start, end)

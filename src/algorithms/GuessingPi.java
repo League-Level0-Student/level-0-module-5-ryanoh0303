@@ -11,12 +11,14 @@ public class GuessingPi {
 	public static void main(String[] args) {
 		String pi = "3.141592653589793238462643383279502";
 		for (int i = 0; i < pi.length(); i++) {
-			String x = pi.charAt(i);
 			String y = JOptionPane.showInputDialog("What is the next digit?");
-			if (y.equals(pi)) {
+			String x= pi.substring(i,i+1);
+
+			if (y.equals(x)) {
 				System.out.println("corrrect");
 			} else {
 				System.out.println("Incorrect");
+				break;
 			}
 		}
 	}
